@@ -43,7 +43,7 @@
 ##
 
 ###Http通信过程（握手序列图）###
-continue...
+continue...  
 
 ## 
 Share：[Nandy](https://github.com/devnns)

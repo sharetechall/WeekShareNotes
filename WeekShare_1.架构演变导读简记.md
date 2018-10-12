@@ -57,3 +57,8 @@
 运维的职责，**Ci：Continuous integration**（持续集成），自动化运维，**docker容器化管理**
 
 
+## 
+Share：[Right](https://github.com/xialonghua)
+Summarize ：[Jiervs](https://github.com/Jiervs)
+
+

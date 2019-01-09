@@ -1,4 +1,4 @@
-##Http缓存机制简记##
+## Http缓存机制简记
 
 **Purpose** ：  
 1.熟悉http协议，提高响应速度，优化体验，节省服务器开销，如静态资源。   
@@ -7,7 +7,7 @@
 
 ##
 
-###Http协议的报文格式###
+### Http协议的报文格式
 
 **HTTP请求报文主要由请求行、请求头部、请求正文3部分组成，如下：**
 
@@ -42,11 +42,12 @@
 
 ##
 
-### Http缓存 ###
+### Http缓存 
 Http协议是建立在TCP协议上，缓存规则信息包含在响应header中，客户端在发起一次请求时，当本地缓存数据库中没有对相应的缓存数据，需要请求服务器，服务器返回后将数据存储到缓存数据库中。Http缓存有很多规则，根据是否重新向服务器请求分为2类：**强制缓存**，**对比缓存**。强制缓存的优先级高于对比缓存。    
  
 ##
-### 强制缓存 ###
+
+### 强制缓存 
 
 响应header中会有两个字段来标明失效规则（Expires/Cache-Control）：  
 
@@ -63,7 +64,8 @@ Http协议是建立在TCP协议上，缓存规则信息包含在响应header中�
 **no-store**：所有内容都不会缓存，强制缓存，对比缓存都不会触发。
  
 ##
-### 对比缓存 ###
+
+### 对比缓存 
 
 浏览器第一次请求数据时，服务器会将缓存标识与数据一起返回给客户端，客户端将二者备份至缓存数据库中。再次请求数据时，客户端将备份的缓存标识发送给服务器，服务器根据缓存标识进行判断，判断成功后，返回304状态码，通知客户端比较成功，可以使用缓存数据。对于对比缓存来说，缓存标识的传递是我们着重需要理解的，它在请求header和响应header间进行传递，一共分为两种标识传递：
 
@@ -84,7 +86,8 @@ Http协议是建立在TCP协议上，缓存规则信息包含在响应header中�
 
 关于http缓存的基本过程：
 
-![avatar](https://raw.githubusercontent.com/sharetechall/resourceRepository/master/WeekShareNotes/http_cache_process.png)
+![avatar](https://raw.githubusercontent.com/sharetechall/resourceRepository/master/WeekShareNotes/http_cache_process.png) 
+
 ## 
 
 Share：[Nandy](https://github.com/devnns)
